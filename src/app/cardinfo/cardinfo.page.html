@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="top-page">
+    <h1>Payment</h1>
+  </div>
+  <div class="card-details">
+      <ion-grid>
+          <ion-row>
+              <ion-col size="8">
+              <div>
+                  <ion-item>
+                      <ion-label position="stacked">Card Number</ion-label>
+                      <ion-input></ion-input>
+                    </ion-item>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div>
+                  <ion-item>
+                      <ion-label position="stacked">Expiry</ion-label>
+                      <ion-input placeholer="MM/YY"></ion-input>
+                    </ion-item>
+              </div>
+            </ion-col>           
+          </ion-row>
+        </ion-grid>
+
+        <ion-row>
+            <ion-col size="8">
+            <div>
+                <ion-item>
+                    <ion-label position="stacked">Name</ion-label>
+                    <ion-input></ion-input>
+                  </ion-item>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+                <ion-item>
+                    <ion-label position="stacked">CVV</ion-label>
+                    <ion-input></ion-input>
+                  </ion-item>
+            </div>
+          </ion-col>           
+        </ion-row>
+  </div>
+
+  <div class="product-info">
+
+    <h3>Product Name</h3>
+    <h4>{{productName}}</h4>
+
+    <h3>Amount</h3>
+    <h4>{{totalAmount|currency:"NGN":"symbol"}}</h4>   
+    
+  </div>
+
+
+
+
+
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar color="tertiary">
+        <ion-button (click)="sendPayment()" expand="full" fill="clear">Pay Now</ion-button>      
+        
+    </ion-toolbar>
+  </ion-footer>

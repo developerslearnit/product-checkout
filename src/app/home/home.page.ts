@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  
+  productPrice = 5000;
+  constructor(private router:Router) {}
+
+  payNow(){
+this.router.navigateByUrl("/cardinfo");
+  }
 
 }

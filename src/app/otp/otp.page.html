@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+    <ion-title>Payment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+<div class="top-page">
+    <h1>OTP Verification</h1>
+</div>
+<div class="digit-screen-wrap">
+  <ion-row>
+    <ion-col>
+      <div class="digit-screen">
+        {{starredPin}}
+      </div>
+    </ion-col>
+  </ion-row>
+</div>
+<div class="ion-padding">
+
+    <ion-button [disabled]="starredPin.length<4" (click)="confirmPin()" expand="full" shape="round" color="tertiary">Confirm</ion-button>      
+
+</div>
+
+<div class="button-section ion-padding">
+    
+    <button type="button" (click)="input(1)">1</button>
+    <button type="button" (click)="input(2)">2</button>
+    <button type="button" (click)="input(3)">3</button>
+    <button type="button" (click)="input(4)">4</button>
+    <button type="button" (click)="input(5)">5</button>
+    <button type="button" (click)="input(6)">6</button>    
+    <button type="button" (click)="input(7)">7</button>
+    <button type="button" (click)="input(8)">8</button>
+    <button type="button" (click)="input(9)">9</button>
+    <button type="button" class="zero-btn" value="(click)(0)">0</button>
+    <button type="button" (click)="backspace()">
+      <ion-icon name="backspace"></ion-icon>
+    </button>
+    
+  </div>
+
+
+
+
+</ion-content>

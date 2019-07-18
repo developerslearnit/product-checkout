@@ -1,0 +1,49 @@
+ion-content {
+    --background: #241332;  
+  }
+  
+  .top-page {
+    background: #fff;
+    height: 30%;
+    border-bottom-left-radius: 200px;
+    margin-top: -15%;
+    position: relative;
+    h1 {
+      position: absolute;
+      right: 20px;
+      bottom: 10%;
+    }
+  }
+
+  .digit-screen-wrap{
+      height: 15%;
+      padding: 20px 30px;
+      .digit-screen{
+          background: #493B54;
+          height: 70px;
+          border-radius: 50px;
+          color:#fff;
+          line-height: 80px;
+          text-align: center;
+          font-size: 35px;
+          letter-spacing: 33px;
+      }
+  }
+
+  .button-section{
+    height: 40%;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    button {      
+        background-color: #9599B3;
+        font-size: 2rem;
+        color: #fff;   
+        padding: 5px 0;
+      }
+
+      .zero-btn{
+        grid-column-start: 1;
+        grid-column-end: 3; 
+      }
+    }
